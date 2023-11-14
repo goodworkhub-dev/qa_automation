@@ -11,3 +11,13 @@ def setup(request):
     request.cls.driver = driver
     yield
     driver.close()
+
+@pytest.fixture(scope="class")
+def org_setup(request):
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        driver.get("https://educationforall.goodworkhub.com/signin")
+        driver.maximize_window()
+        request.cls.driver = driver
+        yield
+        driver.close()
+
