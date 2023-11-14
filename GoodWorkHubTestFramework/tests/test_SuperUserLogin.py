@@ -1,7 +1,7 @@
 import time
 import pytest
 from selenium.webdriver.common.by import By
-from GoodWorkHubTestFramework.pages.RegisteredSuperUser_Login import superuser_login
+from pages.RegisteredSuperUser_Login import superuser_login
 
 
 #Enter supeuser login details

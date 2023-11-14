@@ -2,7 +2,7 @@ import time
 import pytest
 from selenium.webdriver.common.by import By
 
-from GoodWorkHubTestFramework.pages.RegisteredOrgUser_Login import orguser_login
+from pages.RegisteredOrgUser_Login import orguser_login
 
 
 
