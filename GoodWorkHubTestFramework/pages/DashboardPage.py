@@ -1,10 +1,13 @@
 from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
+from pages.PeoplePage import People
+from utilities.BaseClass import BaseClass
 
 
-class DashboardPage:
+class DashboardPage(BaseClass):
     def __init__(self,driver):
         self.driver = driver
+        log = self.getLogger()
 
     dashboard = (By.XPATH,"//span[text()='Dashboard']")
     people = (By.XPATH,"//span[text()='People']")
@@ -12,64 +15,78 @@ class DashboardPage:
     events = (By.XPATH,"//span[text()='Events']")
     planning = (By.XPATH,"//span[text()='Planning']")
     files = (By.XPATH,"//span[text()='Files']")
-    donations = (By.XPATH,"//span[text()='Donations']")
+    donations = (By.XPATH,"//span[normalize-space()='Donations']")
     grants = (By.XPATH,"//span[text()='Grants']")
 
     def dashboard_visible(self):
+        log = self.getLogger()
         try:
             self.driver.find_element(*DashboardPage.dashboard)
-            print("Dashboard element found")
+            log.info("Dashboard element found")
         except NoSuchElementException:
-            print("Dashboard element not found")
+            log.info("Dashboard element not found")
 
     def people_visible(self):
+        log = self.getLogger()
         try:
             self.driver.find_element(*DashboardPage.people)
-            print("People element found")
+            log.info("People element found")
+            page_obj = People(self.driver)
+            return page_obj
         except NoSuchElementException:
-            print("People element not found")
+            log.info("People element not found")
+
 
     def messages_visible(self):
+        log = self.getLogger()
         try:
             self.driver.find_element(*DashboardPage.messages)
-            print("Messages element found")
+            log.info("Messages element found")
         except NoSuchElementException:
-            print("Messages element not found")
+            log.info("Messages element not found")
 
     def events_visible(self):
+        log = self.getLogger()
         try:
             self.driver.find_element(*DashboardPage.events)
-            print("Events element found")
+            log.info("Events element found")
         except NoSuchElementException:
-            print("Events element not found")
+            log.info("Events element not found")
 
     def planning_visible(self):
+        log = self.getLogger()
         try:
             self.driver.find_element(*DashboardPage.planning)
-            print("Planning element found")
+            log.info("Planning element found")
         except NoSuchElementException:
-            print("Planning element not found")
+            log.info("Planning element not found")
 
     def files_visible(self):
+        log = self.getLogger()
         try:
             self.driver.find_element(*DashboardPage.files)
-            print("Files element found")
+            log.info("Files element found")
         except NoSuchElementException:
-            print("Files element not found")
-
-    def donations_visible(self):
-        try:
-            self.driver.find_element(*DashboardPage.donations)
-            print("Donations element found")
-        except NoSuchElementException:
-            print("Donations element not found")
+            log.info("Files element not found")
 
     def grants_visible(self):
+        log = self.getLogger()
         try:
             self.driver.find_element(*DashboardPage.grants)
-            print("Grants element found")
+            log.info("Grants element found")
         except NoSuchElementException:
-            print("Grants element not found")
+            log.info("Grants element not found")
+
+   
+    def donations_visible(self):
+        log = self.getLogger()
+        try:
+            self.driver.find_element(*DashboardPage.donations)
+            log.info("Donations element found")
+        except NoSuchElementException:
+            log.info("Donations element not found")
+
+
 
 
 

@@ -1,6 +1,9 @@
 from selenium.webdriver.common.by import By
 import time
 
+from pages.DashboardPage import DashboardPage
+
+
 class Login:
 
     def __init__(self,driver):
@@ -11,6 +14,9 @@ class Login:
     submit = (By.CSS_SELECTOR, "button[type='submit']")
     login_link = (By.XPATH,"//nav[@class='light__DesktopNavLinks-sc-lj69nl-12 light___StyledDesktopNavLinks-sc-lj69nl-13 ghnKnh cDMWyG']//a[@class='light__NavLink-sc-lj69nl-2 light___StyledNavLink-sc-lj69nl-3 ljgxcr liTeQJ'][normalize-space()='Login']")
 
+    def get_url(self,url):
+        self.driver.get(url)
+        time.sleep(2)
     def email_field(self):
         return self.driver.find_element(*Login.email)
 
@@ -20,6 +26,8 @@ class Login:
     def submit_button(self):
         self.driver.find_element(*Login.submit).click()
         time.sleep(2)
+        dashboard_obj = DashboardPage(self.driver)
+        return dashboard_obj
 
     def login_button(self):
         self.driver.find_element(*Login.login_link).click()

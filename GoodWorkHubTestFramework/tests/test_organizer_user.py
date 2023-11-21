@@ -1,14 +1,17 @@
+from TestData.LoginData import LoginData
 from pages.DashboardPage import DashboardPage
 from utilities.BaseClass import BaseClass
 from pages.LoginPage import Login
-
+import pytest
 
 class TestOrgUserDetails(BaseClass):
-    def test_orgenterdetails(self):
+    def test_orgenterdetails(self,getData):
+        log = self.getLogger()
         #Login
         login = Login(self.driver)
-        login.email_field().send_keys("neetis282+09Nov@gmail.com")
-        login.password_field().send_keys("Thursday@123")
+        login.get_url(getData["url"])
+        login.email_field().send_keys(getData["email"])
+        login.password_field().send_keys(getData["password"])
         login.submit_button()
         #all organizer elements are found
         dashboard_obj = DashboardPage(self.driver)
@@ -21,3 +24,6 @@ class TestOrgUserDetails(BaseClass):
         dashboard_obj.people_visible()
         dashboard_obj.planning_visible()
 
+    @pytest.fixture(params=LoginData.test_orguser_loginpage_data)
+    def getData(self, request):
+        return request.param
