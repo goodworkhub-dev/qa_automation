@@ -21,3 +21,11 @@ def org_setup(request):
         yield
         driver.close()
 
+@pytest.fixture(scope="class")
+def subdomain_setup(request):
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        driver.get("https://yawentest.goodworkhub.com/signin")
+        driver.maximize_window()
+        request.cls.driver = driver
+        yield
+        driver.close()
