@@ -32,6 +32,8 @@ class TestSuperUserDetails(BaseClass):
         time.sleep(2)
         people_obj.Invite_Volunteer_Click()
         time.sleep(2)
+        people_obj.Invite_Organizers_Click()
+        time.sleep(2)
 
     @pytest.fixture(params=LoginData.test_superuser_loginpage_data)
     def getData(self,request):

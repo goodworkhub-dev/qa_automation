@@ -1,3 +1,5 @@
+import time
+
 from TestData.LoginData import LoginData
 from pages.DashboardPage import DashboardPage
 from utilities.BaseClass import BaseClass
@@ -23,6 +25,13 @@ class TestOrgUserDetails(BaseClass):
         dashboard_obj.messages_visible()
         dashboard_obj.people_visible()
         dashboard_obj.planning_visible()
+        # People Features
+        people_obj = dashboard_obj.people_visible()
+        people_obj.People_Link()
+        time.sleep(2)
+        people_obj.Invite_Volunteer_Click()
+        time.sleep(2)
+
 
     @pytest.fixture(params=LoginData.test_orguser_loginpage_data)
     def getData(self, request):
