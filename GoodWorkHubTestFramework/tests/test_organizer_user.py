@@ -8,7 +8,6 @@ import pytest
 
 class TestOrgUserDetails(BaseClass):
     def test_orgenterdetails(self,getData):
-        log = self.getLogger()
         #Login
         login = Login(self.driver)
         login.get_url(getData["url"])

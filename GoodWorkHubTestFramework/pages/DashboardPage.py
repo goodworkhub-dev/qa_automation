@@ -7,7 +7,7 @@ from utilities.BaseClass import BaseClass
 class DashboardPage(BaseClass):
     def __init__(self,driver):
         self.driver = driver
-        log = self.getLogger()
+
 
     dashboard = (By.XPATH,"//span[text()='Dashboard']")
     people = (By.XPATH,"//span[text()='People']")

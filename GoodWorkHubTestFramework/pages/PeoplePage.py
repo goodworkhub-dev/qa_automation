@@ -8,7 +8,6 @@ from utilities.BaseClass import BaseClass
 class People(BaseClass):
     def __init__(self,driver):
         self.driver = driver
-        log = self.getLogger()
 
     people_link = (By.XPATH,"//span[normalize-space()='People']")
     invite_volunteer_btn=(By.CSS_SELECTOR,"header[class='sc-fzoXzr ZNaUV'] button:nth-child(1)")

@@ -9,7 +9,6 @@ from pages.LoginPage import Login
 
 class TestSuperUserDetails(BaseClass):
     def test_superenterdetails(self,getData):
-        log = self.getLogger()
         #Login
         login = Login(self.driver)
         login.get_url(getData["url"])
