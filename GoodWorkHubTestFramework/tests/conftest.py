@@ -49,3 +49,12 @@ def pytest_runtest_makereport(item):
 
 def _capture_screenshot(name):
         driver.get_screenshot_as_file(name)
+
+@pytest.fixture(scope="class")
+def subdomain_setup(request):
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        driver.get("https://yawentest.goodworkhub.com/signin")
+        driver.maximize_window()
+        request.cls.driver = driver
+        yield
+        driver.close()

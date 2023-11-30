@@ -2,8 +2,6 @@ import inspect
 import logging
 import pytest
 
-
-
 @pytest.mark.usefixtures("org_setup")
 class BaseClass:
 
@@ -18,4 +16,5 @@ class BaseClass:
 
         logger.setLevel(logging.DEBUG)
         return logger
+
 
