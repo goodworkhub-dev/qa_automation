@@ -26,6 +26,8 @@ class TestSuperUserDetails(BaseClass):
         dashboard_obj.messages_visible()
         dashboard_obj.people_visible()
         dashboard_obj.planning_visible()
+        #Hub Setup visible
+        dashboard_obj.hub_setup_visible()
         #People Features
         people_obj =dashboard_obj.people_visible()
         people_obj.People_Link()

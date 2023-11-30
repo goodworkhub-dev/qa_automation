@@ -17,6 +17,7 @@ class DashboardPage(BaseClass):
     files = (By.XPATH,"//span[text()='Files']")
     donations = (By.XPATH,"//span[normalize-space()='Donations']")
     grants = (By.XPATH,"//span[text()='Grants']")
+    hub_setup = (By.XPATH,"//h4[normalize-space()='Hub Setup Checklist']")
 
     def dashboard_visible(self):
         log = self.getLogger()
@@ -85,6 +86,15 @@ class DashboardPage(BaseClass):
             log.info("Donations element found")
         except NoSuchElementException:
             log.info("Donations element not found")
+
+    def hub_setup_visible(self):
+        log = self.getLogger()
+        try:
+            self.driver.find_element(*DashboardPage.hub_setup)
+            log.info("hub setup element found")
+        except NoSuchElementException:
+            log.info("hub setup element not found")
+
 
 
 
