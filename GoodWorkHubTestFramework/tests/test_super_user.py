@@ -35,6 +35,14 @@ class TestSuperUserDetails(BaseClass):
         time.sleep(2)
         people_obj.Invite_Organizers_Click()
         time.sleep(2)
+        #Messages Features
+        messages_obj=dashboard_obj.messages_visible()
+        time.sleep(2)
+        messages_obj.messages_link()
+        time.sleep(2)
+        messages_obj.compose_button_click()
+        time.sleep(2)
+        messages_obj.compose_message("EducationForAll")
 
     @pytest.fixture(params=LoginData.test_superuser_loginpage_data)
     def getData(self,request):
