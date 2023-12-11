@@ -30,6 +30,14 @@ class TestOrgUserDetails(BaseClass):
         time.sleep(2)
         people_obj.Invite_Volunteer_Click()
         time.sleep(2)
+        # Messages Features
+        messages_obj = dashboard_obj.messages_visible()
+        time.sleep(2)
+        messages_obj.messages_link()
+        time.sleep(2)
+        messages_obj.compose_button_click()
+        time.sleep(2)
+        messages_obj.compose_message("Science Division")
 
 
     @pytest.fixture(params=LoginData.test_orguser_loginpage_data)
