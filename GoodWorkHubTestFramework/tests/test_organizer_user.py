@@ -37,7 +37,7 @@ class TestOrgUserDetails(BaseClass):
         time.sleep(2)
         messages_obj.compose_button_click()
         time.sleep(2)
-        messages_obj.compose_message("Science Division")
+        messages_obj.compose_message("Science")
 
 
     @pytest.fixture(params=LoginData.test_orguser_loginpage_data)
