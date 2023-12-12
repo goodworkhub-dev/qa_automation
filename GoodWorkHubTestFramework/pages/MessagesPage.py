@@ -30,7 +30,7 @@ class Messages(BaseClass):
         action.key_down(Keys.CONTROL).send_keys(Keys.RETURN).key_up(Keys.CONTROL).perform()
         self.driver.find_element(*Messages.subject_field).send_keys("Test Email")
         self.driver.find_element(*Messages.send_button).click()
-        time.sleep(2)
+        time.sleep(4)
 
 
 
