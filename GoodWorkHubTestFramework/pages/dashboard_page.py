@@ -39,8 +39,7 @@ class DashboardPage(BaseClass):
         try:
             self.driver.find_element(*DashboardPage.people)
             log.info('People element found')
-            page_obj = People(self.driver)
-            return page_obj
+            return People(self.driver)
         except NoSuchElementException:
             log.info('People element not found')
 
@@ -51,8 +50,7 @@ class DashboardPage(BaseClass):
         try:
             self.driver.find_element(*DashboardPage.messages)
             log.info('Messages element found')
-            messages_obj = Messages(self.driver)
-            return messages_obj
+            return Messages(self.driver)
         except NoSuchElementException:
             log.info('Messages element not found')
 

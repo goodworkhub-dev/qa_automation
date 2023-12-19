@@ -31,8 +31,7 @@ class Login:
         """Use for submit button."""
         self.driver.find_element(*Login.submit).click()
         time.sleep(2)
-        dashboard_obj = DashboardPage(self.driver)
-        return dashboard_obj
+        return DashboardPage(self.driver)
 
     def login_button(self):
         """Use for login button."""
