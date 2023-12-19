@@ -23,7 +23,7 @@ class People(BaseClass):
 
     def invite_volunteer_click(self):
         """Use to click on invite volunteer button."""
-        log = self.getLogger()
+        log = self.get_logger()
         self.driver.find_element(*People.invite_volunteer_btn).click()
         time.sleep(2)
         try:
@@ -36,7 +36,7 @@ class People(BaseClass):
 
     def invite_organizers_click(self):
         """Use to click on invite organizers button."""
-        log = self.getLogger()
+        log = self.get_logger()
         self.driver.find_element(*People.invite_organizer_btn).click()
         time.sleep(2)
         try:

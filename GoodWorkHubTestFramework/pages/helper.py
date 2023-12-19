@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 
 
-class logout:
+class Logout:
     """Use for logout."""
 
     def __init__(self,driver):

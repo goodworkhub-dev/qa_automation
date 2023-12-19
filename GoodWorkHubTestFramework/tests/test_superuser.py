@@ -8,14 +8,14 @@ from pages.login_page import Login
 class TestSuperUserDetails(BaseClass):
     """Test Super User Features."""
 
-    def test_superenterdetails(self,getData):
+    def test_superenterdetails(self, get_data):
         """Test Super User Features."""
         #Login
         login = Login(self.driver)
-        login.get_url(getData['url'])
+        login.get_url(get_data['url'])
         login.login_button()
-        login.email_field().send_keys(getData['email'])
-        login.password_field().send_keys(getData['password'])
+        login.email_field().send_keys(get_data['email'])
+        login.password_field().send_keys(get_data['password'])
         dashboard_obj=login.submit_button()
         #all superuser elements are found
         dashboard_obj.dashboard_visible()
@@ -41,6 +41,6 @@ class TestSuperUserDetails(BaseClass):
         messages_obj.delete_message()
 
     @pytest.fixture(params=LoginData.test_superuser_loginpage_data)
-    def getData(self,request):
+    def get_data(self, request):
         """Use to Login."""
         return request.param

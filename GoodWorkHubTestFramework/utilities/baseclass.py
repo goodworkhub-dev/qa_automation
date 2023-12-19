@@ -7,7 +7,7 @@ import pytest
 class BaseClass:
     """Inherit from the class(Parent class or base class)."""
 
-    def getLogger(self):
+    def get_logger(self):
         """Use for logging."""
         loggername = inspect.stack()[1][3]
         logger = logging.getLogger(loggername)

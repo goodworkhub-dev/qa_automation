@@ -3,7 +3,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-from pages.helper import logout
+from pages.helper import Logout
 driver = None
 
 @pytest.fixture(scope='class')
@@ -18,7 +18,7 @@ def org_setup(request):
     request.cls.driver = driver
     driver.implicitly_wait(5)
     yield driver
-    logout(driver)
+    Logout(driver)
 
 def pytest_addoption(parser):
     """Use to select browser."""

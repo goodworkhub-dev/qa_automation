@@ -8,13 +8,13 @@ import pytest
 class TestVolunteerLoginPage(BaseClass):
     """Test Volunteer Features."""
 
-    def test_volunteerenterdetails(self,getData):
+    def test_volunteerenterdetails(self, get_data):
         """Test Volunteer Features."""
         # Login
         login = Login(self.driver)
-        login.get_url(getData['url'])
-        login.email_field().send_keys(getData['email'])
-        login.password_field().send_keys(getData['password'])
+        login.get_url(get_data['url'])
+        login.email_field().send_keys(get_data['email'])
+        login.password_field().send_keys(get_data['password'])
         login.submit_button()
         # all organizer elements are found
         dashboard_obj = DashboardPage(self.driver)
@@ -34,10 +34,10 @@ class TestVolunteerLoginPage(BaseClass):
         messages_obj = dashboard_obj.messages_visible()
         messages_obj.messages_link()
         messages_obj.compose_button_click()
-        #messages_obj.compose_message("English Division")
+        #messages_obj.compose_message('English Division','Volunteer Test Email')
 
     @pytest.fixture(params=LoginData.test_volunteeruser_loginpage_data)
-    def getData(self, request):
+    def get_data(self, request):
         """Use to Login."""
         return request.param
 

@@ -26,7 +26,7 @@ class DashboardPage(BaseClass):
 
     def dashboard_visible(self):
         """Use for dashboard link."""
-        log = self.getLogger()
+        log = self.get_logger()
         try:
             self.driver.find_element(*DashboardPage.dashboard)
             log.info('Dashboard element found')
@@ -35,7 +35,7 @@ class DashboardPage(BaseClass):
 
     def people_visible(self):
         """Use for people link."""
-        log = self.getLogger()
+        log = self.get_logger()
         try:
             self.driver.find_element(*DashboardPage.people)
             log.info('People element found')
@@ -47,7 +47,7 @@ class DashboardPage(BaseClass):
 
     def messages_visible(self):
         """Use for messages link."""
-        log = self.getLogger()
+        log = self.get_logger()
         try:
             self.driver.find_element(*DashboardPage.messages)
             log.info('Messages element found')
@@ -58,7 +58,7 @@ class DashboardPage(BaseClass):
 
     def events_visible(self):
         """Use for events link."""
-        log = self.getLogger()
+        log = self.get_logger()
         try:
             self.driver.find_element(*DashboardPage.events)
             log.info('Events element found')
@@ -67,7 +67,7 @@ class DashboardPage(BaseClass):
 
     def planning_visible(self):
         """Use for planning link."""
-        log = self.getLogger()
+        log = self.get_logger()
         try:
             self.driver.find_element(*DashboardPage.planning)
             log.info('Planning element found')
@@ -76,7 +76,7 @@ class DashboardPage(BaseClass):
 
     def files_visible(self):
         """Use for files link."""
-        log = self.getLogger()
+        log = self.get_logger()
         try:
             self.driver.find_element(*DashboardPage.files)
             log.info('Files element found')
@@ -85,7 +85,7 @@ class DashboardPage(BaseClass):
 
     def grants_visible(self):
         """Use for grants link."""
-        log = self.getLogger()
+        log = self.get_logger()
         try:
             self.driver.find_element(*DashboardPage.grants)
             log.info('Grants element found')
@@ -94,7 +94,7 @@ class DashboardPage(BaseClass):
 
     def donations_visible(self):
         """Use for donations link."""
-        log = self.getLogger()
+        log = self.get_logger()
         try:
             self.driver.find_element(*DashboardPage.donations)
             log.info('Donations element found')
@@ -103,7 +103,7 @@ class DashboardPage(BaseClass):
 
     def hub_setup_visible(self):
         """Use for hub setup link."""
-        log = self.getLogger()
+        log = self.get_logger()
         try:
             self.driver.find_element(*DashboardPage.hub_setup)
             log.info('hub setup element found')
