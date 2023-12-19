@@ -1,18 +1,20 @@
-import time
-
-from TestData.LoginData import LoginData
-from pages.DashboardPage import DashboardPage
-from utilities.BaseClass import BaseClass
-from pages.LoginPage import Login
+"""Test Volunteer Features."""
+from test_data.login_data import LoginData
+from pages.dashboard_page import DashboardPage
+from utilities.baseclass import BaseClass
+from pages.login_page import Login
 import pytest
 
 class TestVolunteerLoginPage(BaseClass):
+    """Test Volunteer Features."""
+
     def test_volunteerenterdetails(self,getData):
+        """Test Volunteer Features."""
         # Login
         login = Login(self.driver)
-        login.get_url(getData["url"])
-        login.email_field().send_keys(getData["email"])
-        login.password_field().send_keys(getData["password"])
+        login.get_url(getData['url'])
+        login.email_field().send_keys(getData['email'])
+        login.password_field().send_keys(getData['password'])
         login.submit_button()
         # all organizer elements are found
         dashboard_obj = DashboardPage(self.driver)
@@ -26,20 +28,16 @@ class TestVolunteerLoginPage(BaseClass):
         dashboard_obj.planning_visible()
         # People Features
         people_obj = dashboard_obj.people_visible()
-        people_obj.People_Link()
-        time.sleep(2)
-        people_obj.Invite_Volunteer_Click()
-        time.sleep(2)
+        people_obj.peoplelink()
+        people_obj.invite_volunteer_click()
         # Messages Features
         messages_obj = dashboard_obj.messages_visible()
-        time.sleep(2)
         messages_obj.messages_link()
-        time.sleep(2)
         messages_obj.compose_button_click()
-        time.sleep(4)
         #messages_obj.compose_message("English Division")
 
     @pytest.fixture(params=LoginData.test_volunteeruser_loginpage_data)
     def getData(self, request):
+        """Use to Login."""
         return request.param
 

@@ -1,0 +1,12 @@
+[tool.ruff]
+# Set line length to 120 characters
+line-length = 200
+select = ["E", "F", "B", "W", "N", "D", "ASYNC", "COM", "C4", "PYI", "Q", "RET","SIM","TCH", "ARG","PL", "C90"]
+
+[tool.ruff.pydocstyle]
+convention = "pep257"
+
+[tool.ruff.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "single"
+multiline-quotes = "double"

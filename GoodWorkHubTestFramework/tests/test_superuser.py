@@ -1,20 +1,21 @@
-import time
-
+"""Test Super User Features."""
 import pytest
-
-from TestData.LoginData import LoginData
-from utilities.BaseClass import BaseClass
-from pages.LoginPage import Login
+from test_data.login_data import LoginData
+from utilities.baseclass import BaseClass
+from pages.login_page import Login
 
 
 class TestSuperUserDetails(BaseClass):
+    """Test Super User Features."""
+
     def test_superenterdetails(self,getData):
+        """Test Super User Features."""
         #Login
         login = Login(self.driver)
-        login.get_url(getData["url"])
+        login.get_url(getData['url'])
         login.login_button()
-        login.email_field().send_keys(getData["email"])
-        login.password_field().send_keys(getData["password"])
+        login.email_field().send_keys(getData['email'])
+        login.password_field().send_keys(getData['password'])
         dashboard_obj=login.submit_button()
         #all superuser elements are found
         dashboard_obj.dashboard_visible()
@@ -29,21 +30,17 @@ class TestSuperUserDetails(BaseClass):
         dashboard_obj.hub_setup_visible()
         #People Features
         people_obj =dashboard_obj.people_visible()
-        people_obj.People_Link()
-        time.sleep(2)
-        people_obj.Invite_Volunteer_Click()
-        time.sleep(2)
-        people_obj.Invite_Organizers_Click()
-        time.sleep(2)
+        people_obj.peoplelink()
+        people_obj.invite_volunteer_click()
+        people_obj.invite_organizers_click()
         #Messages Features
         messages_obj=dashboard_obj.messages_visible()
-        time.sleep(2)
         messages_obj.messages_link()
-        time.sleep(2)
         messages_obj.compose_button_click()
-        time.sleep(2)
-        messages_obj.compose_message("EducationForAll")
+        messages_obj.compose_message('EducationForAll','super user test email')
+        messages_obj.delete_message()
 
     @pytest.fixture(params=LoginData.test_superuser_loginpage_data)
     def getData(self,request):
+        """Use to Login."""
         return request.param
