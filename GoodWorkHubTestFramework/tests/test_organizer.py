@@ -34,7 +34,7 @@ class TestOrgUserDetails(BaseClass):
         messages_obj = dashboard_obj.messages_visible()
         messages_obj.messages_link()
         messages_obj.compose_button_click()
-        messages_obj.compose_message('Science')
+        messages_obj.compose_message('Science','organizer test email')
         messages_obj.delete_message()
 
 
