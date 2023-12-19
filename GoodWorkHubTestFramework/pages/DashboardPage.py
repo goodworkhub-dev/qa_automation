@@ -2,6 +2,7 @@ from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
 from pages.PeoplePage import People
 from utilities.BaseClass import BaseClass
+from pages.MessagesPage import Messages
 
 
 class DashboardPage(BaseClass):
@@ -43,6 +44,8 @@ class DashboardPage(BaseClass):
         try:
             self.driver.find_element(*DashboardPage.messages)
             log.info("Messages element found")
+            messages_obj = Messages(self.driver)
+            return messages_obj
         except NoSuchElementException:
             log.info("Messages element not found")
 
