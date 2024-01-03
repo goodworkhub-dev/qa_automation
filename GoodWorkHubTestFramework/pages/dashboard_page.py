@@ -1,6 +1,8 @@
 """Use for dashboard feature."""
 from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
+
+from pages.events_page import Events
 from pages.people_page import People
 from utilities.baseclass import BaseClass
 from pages.messages_page import Messages
@@ -60,6 +62,7 @@ class DashboardPage(BaseClass):
         try:
             self.driver.find_element(*DashboardPage.events)
             log.info('Events element found')
+            return Events(self.driver)
         except NoSuchElementException:
             log.info('Events element not found')
 

@@ -39,6 +39,14 @@ class TestSuperUserDetails(BaseClass):
         messages_obj.compose_button_click()
         messages_obj.compose_message('EducationForAll','super user test email')
         messages_obj.delete_message()
+        #Events Features
+        events_obj=dashboard_obj.events_visible()
+        events_obj.events_link()
+        events_obj.event_btn()
+        #events_obj.add_event('Intro','EducationForAll','Office')
+
+
+
 
     @pytest.fixture(params=LoginData.test_superuser_loginpage_data)
     def get_data(self, request):
