@@ -18,12 +18,12 @@ class TestSubscriberLoginPage(BaseClass):
         login.password_field().send_keys(get_data['password'])
         login.submit_button()
         # all organizer elements are found
-        dashboard_obj = DashboardPage(self.driver)
-        dashboard_obj.dashboard_visible()
-        dashboard_obj.donations_visible()
-        dashboard_obj.events_visible()
-        dashboard_obj.messages_visible()
-        dashboard_obj.grants_visible()
+        dashboard = DashboardPage(self.driver)
+        dashboard.dashboard_visible()
+        dashboard.donations_visible()
+        dashboard.events_visible()
+        dashboard.messages_visible()
+        dashboard.grants_visible()
     # People, Messages, Files, Grants, Settings tabs shouldn’t be visible)   Grants should display or not?
     @pytest.fixture(params=LoginData.test_subscriberuser_loginpage_data)
     def get_data(self, request):

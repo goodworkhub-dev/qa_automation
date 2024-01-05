@@ -17,9 +17,9 @@ class Messages(BaseClass):
     to_field = (By.CSS_SELECTOR,'.select__value-container.select__value-container--is-multi.css-1hwfws3')
     subject_field = (By.ID,'email-subject')
     send_button = (By.XPATH,"//button[normalize-space()='Send']")
-    sent_link =(By.XPATH,"//span[text()='Sent']")
-    mail_list =(By.XPATH,"//div[@class='mail-details']/div/h5")
-    delete_icon =(By.XPATH,"//div[@class='app-content content overflow-hidden email-application']//li[5]//span[1]//*[name()='svg']")
+    sent_link = (By.XPATH,"//span[text()='Sent']")
+    mail_list = (By.XPATH,"//div[@class='mail-details']/div/h5")
+    delete_icon = (By.XPATH,"//div[@class='app-content content overflow-hidden email-application']//li[5]//span[1]//*[name()='svg']")
 
     def messages_link(self):
         """Use to click on messages link."""

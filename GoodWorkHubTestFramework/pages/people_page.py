@@ -13,10 +13,10 @@ class People(BaseClass):
 
 
     people_link = (By.XPATH,"//span[normalize-space()='People']")
-    invite_volunteer_btn=(By.CSS_SELECTOR,"header[class='sc-fzoXzr ZNaUV'] button:nth-child(1)")
-    send_invitation_btn= (By.CSS_SELECTOR,"button[type='submit']")
-    invite_organizer_btn=(By.XPATH,"//button[normalize-space()='Invite Organizers']")
-    close_btn= (By.CSS_SELECTOR,'.waves-effect.btn-prev.btn.btn-secondary')
+    invite_volunteer_btn = (By.CSS_SELECTOR,"header[class='sc-fzoXzr ZNaUV'] button:nth-child(1)")
+    send_invitation_btn = (By.CSS_SELECTOR,"button[type='submit']")
+    invite_organizer_btn = (By.XPATH,"//button[normalize-space()='Invite Organizers']")
+    close_btn = (By.CSS_SELECTOR,'.waves-effect.btn-prev.btn.btn-secondary')
     def peoplelink(self):
         """Use to click on people link."""
         self.driver.find_element(*People.people_link).click()

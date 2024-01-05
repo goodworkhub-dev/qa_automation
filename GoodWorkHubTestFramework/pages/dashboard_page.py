@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 
 from pages.events_page import Events
 from pages.people_page import People
+from pages.planning_page import Planning
 from utilities.baseclass import BaseClass
 from pages.messages_page import Messages
 
@@ -72,6 +73,7 @@ class DashboardPage(BaseClass):
         try:
             self.driver.find_element(*DashboardPage.planning)
             log.info('Planning element found')
+            return Planning(self.driver)
         except NoSuchElementException:
             log.info('Planning element not found')
 

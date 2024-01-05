@@ -15,17 +15,17 @@ class Events(BaseClass):
         """Use to initialize class."""
         self.driver = driver
 
-    events_tab=(By.XPATH,"//span[text()='Events']")
-    add_event_btn=(By.XPATH,"//span[text()='Add Event']")
-    add_title=(By.ID,'title')
-    select_guest=(By.XPATH,"//div[text()='Select...']")
-    add_location=(By.ID,'location')
-    add_button=(By.XPATH,"//button[@type='submit']")
-    start_date=(By.ID,'startDate')
-    end_date=(By.ID,'endDate')
-    select_calendar=(By.XPATH,"//div[@class='flatpickr-calendar hasTime animate showTimeInput open arrowTop']")
-    start_current_month=(By.XPATH,"//div[@class='flatpickr-calendar hasTime animate showTimeInput open arrowTop']//select[@class='flatpickr-monthDropdown-months']")
-    start_current_year=(By.XPATH,"//div[@class='flatpickr-calendar hasTime animate showTimeInput open arrowTop']//input[@aria-label='Year']")
+    events_tab = (By.XPATH,"//span[text()='Events']")
+    add_event_btn = (By.XPATH,"//span[text()='Add Event']")
+    add_title = (By.ID,'title')
+    select_guest = (By.XPATH,"//div[text()='Select...']")
+    add_location = (By.ID,'location')
+    add_button = (By.XPATH,"//button[@type='submit']")
+    start_date = (By.ID,'startDate')
+    end_date = (By.ID,'endDate')
+    select_calendar = (By.XPATH,"//div[@class='flatpickr-calendar hasTime animate showTimeInput open arrowTop']")
+    start_current_month = (By.XPATH,"//div[@class='flatpickr-calendar hasTime animate showTimeInput open arrowTop']//select[@class='flatpickr-monthDropdown-months']")
+    start_current_year = (By.XPATH,"//div[@class='flatpickr-calendar hasTime animate showTimeInput open arrowTop']//input[@aria-label='Year']")
 
 
 

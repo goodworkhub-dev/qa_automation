@@ -14,7 +14,7 @@ class Login:
     email = (By.ID, 'register-email')
     password = (By.ID, 'register-password')
     submit = (By.CSS_SELECTOR, "button[type='submit']")
-    login_link=(By.LINK_TEXT,'Login')
+    login_link = (By.LINK_TEXT,'Login')
     def get_url(self,url):
         """Use for url."""
         self.driver.get(url)
