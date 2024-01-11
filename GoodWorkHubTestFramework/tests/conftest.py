@@ -1,44 +1,46 @@
+"""Use to Configure test."""
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-from pages.helper import logout
+from pages.helper import Logout
 driver = None
 
-@pytest.fixture(scope="class")
+@pytest.fixture(scope='class')
 def org_setup(request):
-    browser_name=request.config.getoption("browser_name")
-    if browser_name == "chrome":
+    """Use to select browser."""
+    browser_name=request.config.getoption('browser_name')
+    if browser_name == 'chrome':
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
-    elif browser_name == "firefox":
+    elif browser_name == 'firefox':
         driver = webdriver.Firefox()
     driver.maximize_window()
     request.cls.driver = driver
+    driver.implicitly_wait(5)
     yield driver
-    logout(driver)
+    Logout(driver)
 
 def pytest_addoption(parser):
+    """Use to select browser."""
     parser.addoption(
-        "--browser_name", action="store", default="chrome"
+        '--browser_name', action='store', default='chrome',
         )
 
-
-
-@pytest.mark.hookwrapper
-def pytest_runtest_makereport(item):
-    """
+"""
         Extends the PyTest Plugin to take and embed screenshot in html report, whenever test fails.
         :param item:
         """
+@pytest.mark.hookwrapper
+def pytest_runtest_makereport(item):
+    """Use to build HTML report."""
     pytest_html = item.config.pluginmanager.getplugin('html')
     outcome = yield
     report = outcome.get_result()
     extra = getattr(report, 'extra', [])
-
-    if report.when == 'call' or report.when == "setup":
+    if report.when == ('call','setup'):
         xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
-            file_name = report.nodeid.replace("::", "_") + ".png"
+            file_name = report.nodeid.replace('::', '_') + '.png'
             _capture_screenshot(file_name)
             if file_name:
                 html = '<div><img src="%s" alt="screenshot" style="width:304px;height:228px;" ' \
@@ -50,10 +52,12 @@ def pytest_runtest_makereport(item):
 def _capture_screenshot(name):
         driver.get_screenshot_as_file(name)
 
-@pytest.fixture(scope="class")
+
+@pytest.fixture(scope='class')
 def subdomain_setup(request):
+        """Use to Login."""
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
-        driver.get("https://yawentest.goodworkhub.com/signin")
+        driver.get('https://yawentest.goodworkhub.com/signin')
         driver.maximize_window()
         request.cls.driver = driver
         yield
