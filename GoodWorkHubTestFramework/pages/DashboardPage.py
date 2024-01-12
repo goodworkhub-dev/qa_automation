@@ -3,7 +3,8 @@ from selenium.webdriver.common.by import By
 from pages.PeoplePage import People
 from utilities.BaseClass import BaseClass
 from pages.MessagesPage import Messages
-
+from pages.FilesPage import Files
+import time
 
 class DashboardPage(BaseClass):
     def __init__(self,driver):
@@ -23,14 +24,17 @@ class DashboardPage(BaseClass):
     def dashboard_visible(self):
         log = self.getLogger()
         try:
+            time.sleep(10)
             self.driver.find_element(*DashboardPage.dashboard)
             log.info("Dashboard element found")
         except NoSuchElementException:
-            log.info("Dashboard element not found")
+            log.info("Dashboard element not found",)
+
 
     def people_visible(self):
         log = self.getLogger()
         try:
+            time.sleep(5)
             self.driver.find_element(*DashboardPage.people)
             log.info("People element found")
             page_obj = People(self.driver)
@@ -70,6 +74,8 @@ class DashboardPage(BaseClass):
         try:
             self.driver.find_element(*DashboardPage.files)
             log.info("Files element found")
+            files_obj = Files(self.driver)
+            return files_obj
         except NoSuchElementException:
             log.info("Files element not found")
 

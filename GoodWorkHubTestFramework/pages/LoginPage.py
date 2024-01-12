@@ -25,7 +25,6 @@ class Login:
 
     def submit_button(self):
         self.driver.find_element(*Login.submit).click()
-        time.sleep(2)
         dashboard_obj = DashboardPage(self.driver)
         return dashboard_obj
 
