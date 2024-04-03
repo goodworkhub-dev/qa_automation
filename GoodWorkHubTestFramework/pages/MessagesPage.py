@@ -10,7 +10,7 @@ class Messages(BaseClass):
     def __init__(self, driver):
         self.driver = driver
 
-    messages_tab = (By.CSS_SELECTOR, ".d-flex.align-items-center[href='/messages']")
+    messages_tab = (By.XPATH,"//span[text()='Messages']")
     compose_button = (By.XPATH, "//button[normalize-space()='Compose']")
     to_field = (By.CSS_SELECTOR, ".select__value-container.select__value-container--is-multi.css-1hwfws3")
     subject_field = (By.ID, "email-subject")

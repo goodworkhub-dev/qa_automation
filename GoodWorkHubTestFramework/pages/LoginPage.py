@@ -6,17 +6,20 @@ from pages.DashboardPage import DashboardPage
 
 class Login:
 
-    def __init__(self,driver):
+    def __init__(self, driver):
         self.driver = driver
 
     email = (By.ID, "register-email")
     password = (By.ID, "register-password")
     submit = (By.CSS_SELECTOR, "button[type='submit']")
-    login_link = (By.XPATH,"//nav[@class='light__DesktopNavLinks-sc-lj69nl-12 light___StyledDesktopNavLinks-sc-lj69nl-13 ghnKnh cDMWyG']//a[@class='light__NavLink-sc-lj69nl-2 light___StyledNavLink-sc-lj69nl-3 ljgxcr liTeQJ'][normalize-space()='Login']")
+    # login_link = (By.XPATH, "//a[text()='Login']")
+    login = (By.XPATH, "//button[text()='Login']")
+    org_name = (By.CLASS_NAME, "org-name")
 
-    def get_url(self,url):
+    def get_url(self, url):
         self.driver.get(url)
         time.sleep(2)
+
     def email_field(self):
         return self.driver.find_element(*Login.email)
 
@@ -28,6 +31,12 @@ class Login:
         dashboard_obj = DashboardPage(self.driver)
         return dashboard_obj
 
-    def login_button(self):
-        self.driver.find_element(*Login.login_link).click()
-        time.sleep(2)
+    def click_login_button(self):
+        self.driver.find_element(*Login.login).click()
+        # dashboard_obj = DashboardPage(self.driver)
+        # return dashboard_obj
+
+    def org_select(self):
+        self.driver.find_element(*Login.org_name).click()
+        dashboard_obj = DashboardPage(self.driver)
+        return dashboard_obj

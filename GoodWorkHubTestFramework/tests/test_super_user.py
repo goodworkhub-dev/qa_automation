@@ -8,35 +8,37 @@ from pages.LoginPage import Login
 
 
 class TestSuperUserDetails(BaseClass):
-    def test_superenterdetails(self,getData):
-        #Login
+    def test_superenterdetails(self):
+        # Login
         login = Login(self.driver)
-        login.get_url(getData["url"])
+        login.get_url("https://app.goodworkhub.com/login")
+        time.sleep(5)
+        login.email_field().send_keys("neeti@goodworkhub.com")
+        login.password_field().send_keys("qwerty")
+
+        # login.email_field().send_keys(getData["email"])
+        # login.password_field().send_keys(getData["password"])
         login.login_button()
-        login.email_field().send_keys(getData["email"])
-        login.password_field().send_keys(getData["password"])
-        dashboard_obj=login.submit_button()
-        time.sleep(50)
-        #all superuser elements are found
+        # all superuser elements are found
         # dashboard_obj.dashboard_visible()
         # dashboard_obj.donations_visible()
         # dashboard_obj.events_visible()
         # dashboard_obj.files_visible()
         # dashboard_obj.grants_visible()
         # dashboard_obj.messages_visible()
-        # dashboard_obj.people_visible()
-        # dashboard_obj.planning_visible()
-        #Hub Setup visible
+        # dashboard_obj.teams_visible()
+        # dashboard_obj.todolist_visible()
+        # Hub Setup visible
         # dashboard_obj.hub_setup_visible()
-        #People Features
-        # people_obj =dashboard_obj.people_visible()
-        # people_obj.People_Link()
+        #Teams Features
+        # teams_obj =dashboard_obj.teams_visible()
+        # teams_obj.teams_Link()
         # time.sleep(2)
-        # people_obj.Invite_Volunteer_Click()
+        # teams_obj.invite_volunteer_click()
         # time.sleep(2)
-        # people_obj.Invite_Organizers_Click()
+        # teams_obj.invite_organizers_click()
         # time.sleep(2)
-        #Messages Features
+        # Messages Features
         # messages_obj=dashboard_obj.messages_visible()
         # time.sleep(2)
         # messages_obj.messages_link()
@@ -63,7 +65,6 @@ class TestSuperUserDetails(BaseClass):
         files_obj.create_new_folder("testSuper")
         time.sleep(5)
 
-
     @pytest.fixture(params=LoginData.test_superuser_loginpage_data)
-    def getData(self,request):
+    def getData(self, request):
         return request.param

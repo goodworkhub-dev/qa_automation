@@ -33,9 +33,9 @@ class TestOrgUserDetails(BaseClass):
         time.sleep(2)
         # Messages Features
         messages_obj = dashboard_obj.messages_visible()
-        time.sleep(10)
+        time.sleep(20)
         messages_obj.messages_link()
-        time.sleep(100)
+        time.sleep(50)
         messages_obj.compose_button_click()
         time.sleep(10)
         messages_obj.compose_message("Science", "org test email")

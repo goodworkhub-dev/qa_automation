@@ -696,3 +696,141 @@
 2024-01-11 15:37:03,473 :INFO : files_visible :Files element found
 2024-01-11 15:45:20,979 :INFO : files_visible :Files element found
 2024-01-11 15:48:32,529 :INFO : files_visible :Files element found
+2024-02-26 12:34:14,605 :INFO : dashboard_visible :Dashboard element found
+2024-02-26 12:34:14,620 :INFO : donations_visible :Donations element found
+2024-02-26 12:34:14,628 :INFO : events_visible :Events element found
+2024-02-26 12:34:14,636 :INFO : files_visible :Files element found
+2024-02-26 12:34:14,642 :INFO : grants_visible :Grants element found
+2024-02-26 12:34:14,648 :INFO : messages_visible :Messages element found
+2024-02-26 12:34:19,667 :INFO : people_visible :People element not found
+2024-02-26 12:34:19,677 :INFO : planning_visible :Planning element found
+2024-02-26 12:34:21,696 :INFO : messages_visible :Messages element found
+2024-02-26 12:34:21,696 :INFO : messages_visible :Messages element found
+2024-02-26 12:36:08,299 :INFO : dashboard_visible :Dashboard element found
+2024-02-26 12:36:08,312 :INFO : donations_visible :Donations element found
+2024-02-26 12:36:08,321 :INFO : events_visible :Events element found
+2024-02-26 12:36:08,329 :INFO : files_visible :Files element found
+2024-02-26 12:36:08,335 :INFO : grants_visible :Grants element found
+2024-02-26 12:36:08,341 :INFO : messages_visible :Messages element found
+2024-02-26 12:36:13,363 :INFO : people_visible :People element not found
+2024-02-26 12:36:13,375 :INFO : planning_visible :Planning element found
+2024-02-26 12:36:15,393 :INFO : messages_visible :Messages element found
+2024-02-26 12:36:15,393 :INFO : messages_visible :Messages element found
+2024-02-26 12:37:09,063 :INFO : dashboard_visible :Dashboard element found
+2024-02-26 12:37:09,077 :INFO : donations_visible :Donations element found
+2024-02-26 12:37:09,086 :INFO : events_visible :Events element found
+2024-02-26 12:37:09,093 :INFO : files_visible :Files element found
+2024-02-26 12:37:09,100 :INFO : grants_visible :Grants element found
+2024-02-26 12:37:09,107 :INFO : messages_visible :Messages element found
+2024-02-26 12:37:14,129 :INFO : people_visible :People element not found
+2024-02-26 12:37:14,141 :INFO : planning_visible :Planning element found
+2024-02-26 12:37:16,160 :INFO : messages_visible :Messages element found
+2024-02-26 12:37:16,160 :INFO : messages_visible :Messages element found
+2024-02-26 12:40:01,055 :INFO : dashboard_visible :Dashboard element found
+2024-02-26 12:40:01,068 :INFO : donations_visible :Donations element found
+2024-02-26 12:40:01,078 :INFO : events_visible :Events element found
+2024-02-26 12:40:01,085 :INFO : files_visible :Files element found
+2024-02-26 12:40:01,091 :INFO : grants_visible :Grants element found
+2024-02-26 12:40:01,098 :INFO : messages_visible :Messages element found
+2024-02-26 12:40:06,119 :INFO : people_visible :People element not found
+2024-02-26 12:40:06,131 :INFO : planning_visible :Planning element found
+2024-02-26 12:40:08,149 :INFO : messages_visible :Messages element found
+2024-02-26 12:40:08,149 :INFO : messages_visible :Messages element found
+2024-02-26 12:44:38,287 :INFO : dashboard_visible :Dashboard element found
+2024-02-26 12:44:38,300 :INFO : donations_visible :Donations element found
+2024-02-26 12:44:38,309 :INFO : events_visible :Events element found
+2024-02-26 12:44:38,316 :INFO : files_visible :Files element found
+2024-02-26 12:44:38,322 :INFO : grants_visible :Grants element found
+2024-02-26 12:44:38,328 :INFO : messages_visible :Messages element found
+2024-02-26 12:44:43,357 :INFO : people_visible :People element not found
+2024-02-26 12:44:43,372 :INFO : planning_visible :Planning element found
+2024-02-26 12:44:45,392 :INFO : messages_visible :Messages element found
+2024-02-26 12:44:45,392 :INFO : messages_visible :Messages element found
+2024-02-26 12:47:55,249 :INFO : dashboard_visible :Dashboard element found
+2024-02-26 12:47:55,262 :INFO : donations_visible :Donations element found
+2024-02-26 12:47:55,271 :INFO : events_visible :Events element found
+2024-02-26 12:47:55,278 :INFO : files_visible :Files element found
+2024-02-26 12:47:55,285 :INFO : grants_visible :Grants element found
+2024-02-26 12:47:55,291 :INFO : messages_visible :Messages element found
+2024-02-26 12:48:00,300 :INFO : people_visible :People element not found
+2024-02-26 12:48:00,306 :INFO : planning_visible :Planning element found
+2024-02-26 12:48:02,323 :INFO : messages_visible :Messages element found
+2024-02-26 12:48:02,323 :INFO : messages_visible :Messages element found
+2024-02-26 12:49:33,911 :INFO : dashboard_visible :Dashboard element found
+2024-02-26 12:49:33,924 :INFO : donations_visible :Donations element found
+2024-02-26 12:49:33,934 :INFO : events_visible :Events element found
+2024-02-26 12:49:33,941 :INFO : files_visible :Files element found
+2024-02-26 12:49:33,948 :INFO : grants_visible :Grants element found
+2024-02-26 12:49:33,954 :INFO : messages_visible :Messages element found
+2024-02-26 12:49:38,973 :INFO : people_visible :People element not found
+2024-02-26 12:49:38,985 :INFO : planning_visible :Planning element found
+2024-02-26 12:49:41,002 :INFO : messages_visible :Messages element found
+2024-02-26 12:49:41,002 :INFO : messages_visible :Messages element found
+2024-02-26 14:18:18,531 :INFO : dashboard_visible :Dashboard element found
+2024-02-26 14:18:18,544 :INFO : donations_visible :Donations element found
+2024-02-26 14:18:18,553 :INFO : events_visible :Events element found
+2024-02-26 14:18:18,561 :INFO : files_visible :Files element found
+2024-02-26 14:18:18,569 :INFO : grants_visible :Grants element found
+2024-02-26 14:18:18,575 :INFO : messages_visible :Messages element found
+2024-02-26 14:18:23,595 :INFO : people_visible :People element not found
+2024-02-26 14:18:23,608 :INFO : planning_visible :Planning element found
+2024-02-26 14:18:25,638 :INFO : messages_visible :Messages element found
+2024-02-26 14:18:25,638 :INFO : messages_visible :Messages element found
+2024-02-26 14:41:28,239 :INFO : settings_visible :hub setup element not found
+2024-02-26 14:42:11,476 :INFO : settings_visible :hub setup element not found
+2024-02-26 14:42:57,278 :INFO : settings_visible :hub setup element not found
+2024-02-26 14:47:53,286 :INFO : settings_visible :hub setup element not found
+2024-02-26 14:49:02,020 :INFO : settings_visible :hub setup element not found
+2024-02-26 14:55:02,288 :INFO : files_visible :Files element not found
+2024-02-26 15:35:55,644 :INFO : settings_visible :hub setup element found
+2024-02-26 15:40:23,846 :INFO : settings_visible :hub setup element found
+2024-02-26 15:42:30,359 :INFO : settings_visible :hub setup element found
+2024-02-26 15:43:47,568 :INFO : settings_visible :hub setup element found
+2024-02-26 15:46:25,016 :INFO : settings_visible :hub setup element found
+2024-02-26 15:50:08,068 :INFO : settings_visible :hub setup element found
+2024-02-26 15:52:28,803 :INFO : settings_visible :hub setup element found
+2024-02-26 15:54:58,299 :INFO : settings_visible :hub setup element found
+2024-02-26 15:56:27,369 :INFO : settings_visible :hub setup element found
+2024-02-26 15:57:56,673 :INFO : settings_visible :hub setup element found
+2024-03-04 16:43:03,840 :INFO : settings_visible :hub setup element found
+2024-03-04 16:46:03,776 :INFO : settings_visible :hub setup element found
+2024-03-04 16:47:31,469 :INFO : settings_visible :hub setup element found
+2024-03-04 16:50:41,219 :INFO : settings_visible :hub setup element found
+2024-03-04 16:52:37,770 :INFO : settings_visible :hub setup element found
+2024-03-04 17:01:02,561 :INFO : settings_visible :hub setup element found
+2024-03-04 17:13:04,569 :INFO : settings_visible :hub setup element found
+2024-03-04 17:13:04,584 :INFO : settings_visible :hub setup element not found
+2024-03-04 20:48:24,394 :INFO : settings_visible :hub setup element found
+2024-03-04 21:29:49,784 :INFO : settings_visible :hub setup element found
+2024-03-04 21:58:09,531 :INFO : settings_visible :hub setup element found
+2024-03-04 21:58:09,539 :INFO : settings_visible :hub setup element not found
+2024-03-04 22:00:52,933 :INFO : settings_visible :hub setup element found
+2024-03-04 22:04:54,803 :INFO : settings_visible :hub setup element found
+2024-03-04 22:09:29,810 :INFO : settings_visible :hub setup element found
+2024-03-04 22:19:49,572 :INFO : settings_visible :hub setup element found
+2024-03-04 22:34:49,895 :INFO : settings_visible :hub setup element found
+2024-03-04 22:46:13,111 :INFO : settings_visible :hub setup element found
+2024-03-04 22:49:11,110 :INFO : settings_visible :hub setup element found
+2024-03-04 22:49:11,119 :INFO : settings_visible :hub setup element not found
+2024-03-04 22:56:56,940 :INFO : settings_visible :hub setup element found
+2024-03-04 23:00:11,781 :INFO : settings_visible :hub setup element found
+2024-03-04 23:03:49,865 :INFO : settings_visible :hub setup element found
+2024-03-04 23:07:25,784 :INFO : settings_visible :hub setup element found
+2024-03-05 20:40:26,504 :INFO : settings_visible :hub setup element found
+2024-03-05 21:01:53,462 :INFO : settings_visible :hub setup element found
+2024-03-05 21:06:33,078 :INFO : settings_visible :hub setup element found
+2024-03-05 21:13:33,491 :INFO : settings_visible :hub setup element found
+2024-03-05 21:17:04,263 :INFO : settings_visible :hub setup element found
+2024-03-05 21:17:04,271 :INFO : settings_visible :hub setup element not found
+2024-03-05 21:19:28,903 :INFO : settings_visible :hub setup element found
+2024-03-05 21:22:12,487 :INFO : settings_visible :hub setup element found
+2024-03-05 21:37:21,286 :INFO : settings_visible :hub setup element found
+2024-03-05 21:40:38,364 :INFO : settings_visible :hub setup element found
+2024-03-05 21:43:52,873 :INFO : settings_visible :hub setup element found
+2024-03-05 21:43:52,881 :INFO : settings_visible :hub setup element not found
+2024-03-05 21:45:37,321 :INFO : settings_visible :hub setup element found
+2024-03-05 21:52:01,580 :INFO : settings_visible :hub setup element found
+2024-03-05 21:55:52,404 :INFO : settings_visible :hub setup element found
+2024-03-28 13:05:44,885 :INFO : click_switch_hub :switch hub element not found
+2024-03-28 13:23:58,106 :INFO : click_switch_hub :switch hub element not found
+2024-03-28 13:26:09,726 :INFO : click_switch_hub :switch hub element not found
