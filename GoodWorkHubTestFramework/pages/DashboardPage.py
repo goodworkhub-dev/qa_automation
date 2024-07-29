@@ -12,21 +12,27 @@ class DashboardPage(BaseClass):
 
 
     dashboard = (By.XPATH, "//span[text()='Dashboard']")
-    #Teams
     teams = (By.XPATH, "//span[text()='Teams']")
     messages = (By.XPATH, "//span[text()='Messages']")
     events = (By.XPATH, "//span[text()='Events']")
-    #todolist
     todolist = (By.XPATH, "//span[text()='ToDo Lists']")
     files = (By.XPATH, "//span[text()='Files']")
     donations = (By.XPATH, "//span[normalize-space()='Donations']")
     grants = (By.XPATH, "//span[text()='Grants']")
-    # hub_setup = (By.XPATH,"//h4[normalize-space()='Hub Setup Checklist']")
     settings = (By.XPATH, "//span[text()='Settings']")
     switch_hub_tab = (By.XPATH, "//span[text()='Switch Hub']")
     user_avatar = (By.XPATH, "//div[class ='avatar bg-danger avatar-md'] span[class ='avatar-content']")
     sign_out_button = (By.XPATH, "//div[@role='menu']//a[@role='menuitem']")
     create_new_hub_tab= (By.XPATH, "//button[@role='menuitem']")
+    grants_tile = (By.XPATH, "(//div[@class='card-body'])[1]")
+    teams_tile = (By.XPATH, "(//div[@class='card-body'])[2]")
+    volunteers_tile = (By.XPATH, "(//div[@class='card-body'])[3]")
+    events_tile = (By.XPATH, "(//div[@class='card-body'])[4]")
+    files_tile = (By.XPATH, "(//div[@class='card-body'])[5]")
+    help_icon = (By.XPATH, "//*[@title='Click for Help'])")
+    hub_todos_tiles = (By.XPATH, "//div[@class='card-additional-title card-header'])[1]")
+    quick_links_tiles = (By.XPATH, "//div[@class='card-header']")
+
 
 
     def dashboard_visible(self):
@@ -137,3 +143,28 @@ class DashboardPage(BaseClass):
 
     def click_sign_out_button(self):
         return self.driver.find_element(*DashboardPage.user_avatar)
+
+    def verify_grants_tile(self):
+        return self.driver.find_element(*DashboardPage.grants_tile)
+
+    def verify_teams_tile(self):
+        return self.driver.find_element(*DashboardPage.teams_tile)
+
+    def verify_volunteers_tile(self):
+        return self.driver.find_element(*DashboardPage.volunteers_tile)
+
+    def verify_events_tile(self):
+        return self.driver.find_element(*DashboardPage.events_tile)
+
+    def verify_files_tile(self):
+        return self.driver.find_element(*DashboardPage.files_tile)
+
+    def verify_help_icon(self):
+        return self.driver.find_element(*DashboardPage.help_icon)
+
+    def verify_hub_todos_tiles(self):
+        return self.driver.find_element(*DashboardPage.hub_todos_tiles)
+
+    def verify_quick_links_tiles(self):
+        return self.driver.find_element(*DashboardPage.quick_links_tiles)
+
